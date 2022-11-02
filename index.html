@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // Level 2
+      console.log("Level 2 Solution: ");
+      let sourceArr = [70, "рыба", 250, "круг", 50, 300, 1, "треугольник"];
+      console.log("Source array = ", sourceArr);
+      let filteredArr = sourceArr.filter((item) => typeof item == "number");
+      console.log("Filtered array = ", filteredArr);
+      console.log("Median value = ", median(filteredArr));
+
+      function median(arr) {
+        arr.sort((a, b) => a - b);
+        console.log("Sorted array = ", arr);
+        if (arr.length % 2 == 0) {
+          return (arr[arr.length / 2 - 1] + arr[arr.length / 2]) / 2;
+        } else {
+          return arr[Math.floor(arr.length / 2)];
+        }
+      }
+
+      // Level 3
+      console.log("Level 3 Solution: ");
+      let inputString = "poiuytrewqlkjhgfdsamnbvcxz";
+      console.log("Input string = " + inputString);
+      let result = inputString.split("").sort().join("").toUpperCase();
+      console.log("Result = " + result);
+    </script>
+  </head>
+  <body></body>
+</html>
